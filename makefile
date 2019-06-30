@@ -10,6 +10,8 @@ mocha := node_modules/.bin/mocha
 # Image
 redis_tag := redis-test
 
+.IGNORE: clean-linux kill stop
+
 main: run
 
 dev:
@@ -21,6 +23,14 @@ run: dev
 	@NODE_ENV=development \
 	node app/index.js
 
+kill:
+	@echo "[INFO] Killing docker image"
+	@docker kill $(redis_tag)
+
+stop: kill
+	@echo "[INFO] Stopping docker image"
+	@docker rm $(redis_tag)
+
 redis:
 	@echo "[INFO] Running redis with Docker"
-	@docker run --name $(redis_tag) -d redis -p 6379:6379
+	@docker run -it -p 6379:6379 --name $(redis_tag) redis:latest
