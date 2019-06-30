@@ -8,7 +8,7 @@ import * as Express from "express";
 import * as Redis from "redis";
 
 const app: Express.Express = Express();
-const port: number = 3000;
+const port: number = 8080;
 
 const redis: Redis.RedisClient = Redis.createClient(6379, 'localhost');
 
