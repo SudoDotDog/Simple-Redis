@@ -40,13 +40,8 @@ spec:
       containers:
       - name: slave
         image: redis:latest
-        command:
-          - redis-server
-          - --daemonize
-          - "yes"
-          - --slaveof
-          - redis-master
-          - "6379"
+        command: ["/bin/sh"]
+        args: ["-c", "redis-server --slaveof redis-master 6379"]
         resources:
           requests:
             cpu: 100m
