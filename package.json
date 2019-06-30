@@ -1,0 +1,29 @@
+{
+  "name": "simple-redis",
+  "version": "1.0.0",
+  "description": ":hamster: Simple Redis usage playground",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoDotDog/Simple-Redis.git"
+  },
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoDotDog/Simple-Redis/issues"
+  },
+  "homepage": "https://github.com/SudoDotDog/Simple-Redis#readme",
+  "dependencies": {
+    "@sudoo/triforce": "^1.6.0",
+    "@types/express": "^4.17.0",
+    "@types/redis": "^2.8.13",
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
+  }
+}
