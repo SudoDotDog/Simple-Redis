@@ -75,5 +75,8 @@ bash:
 bash-r:
 	@kubectl run my-shell-r --rm -i --tty --image redis -- bash
 
+bash-n:
+	@kubectl run my-shell-n --rm -i --tty --image node -- bash
+
 bash2:
 	@kubectl run my-shell2 --rm -i --tty --image centos -- bash
