@@ -68,3 +68,6 @@ stop: kill
 redis:
 	@echo "[INFO] Running redis with Docker"
 	@docker run -it -p 6379:6379 --name $(redis_tag) redis:latest
+
+bash:
+	@kubectl run my-shell --rm -i --tty --image centos -- bash
